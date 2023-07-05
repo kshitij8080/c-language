@@ -1,33 +1,31 @@
 #include<stdio.h>
-struct student
-{
-    int rno;
-    char sname[20];
-    float per;
-}s1[100];
-
-int main()
-{
-    int n,i;
-    printf("enter limit");
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
-    {
-        printf("enter student rno:");
-        scanf("%d",&s1[i].rno);
-        printf("enter student sname:");
-        scanf("%s",&s1[i].sname);
-        printf("enter student per:");
-        scanf("%f",&s1[i].per);        
-    }    
-    for(i=0;i<n;i++)
-    {
-        if(s1[i].per>=50)
-        {
-            printf("\n roll no=%d",s1[i].rno);
-            printf("\n sname=%s",s1[i].sname);
-            printf("\n percentage=%.2f",s1[i].per);
-        }
-    }
-    
+ struct stud
+ {
+ 	int rno;
+ 	char  sname[20];
+ 	float per;
+ }s1[100];
+ int main()
+ {
+ 	int n,i,num;
+ 	printf("enter limit :");
+ 	scanf("%d",&n);
+ 	for(i=0; i<n; i++)
+ 	{
+ 		printf("\n enter rollno name per  :");
+ 		scanf("%d%s%f",&s1[i].rno,&s1[i].sname,&s1[i].per);
+	 }
+	 printf("enter student roll no number to search record..:");
+	 scanf("%d",&num);
+	 for(i=0; i<n; i++)
+	 {
+	 	if(s1[i].rno==num)
+	 	 {
+	 	 	printf("\n name=%s",s1[i].sname);
+	 	 	printf("\n per=%f",s1[i].per);
+		  }
+		  break;
+	 }
+	    if(i==n)
+	        printf("record not found...");
 }

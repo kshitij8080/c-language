@@ -1,9 +1,8 @@
-
 #include<stdio.h>
 struct emp
 {
      int eno;
-     char ename;
+     char ename[20];
      float sal;
 }e1[100];
 int main()
@@ -14,7 +13,7 @@ int main()
    for(i=0;i<n;i++)
    {
      printf("Enter emp no name sal:");
-     scanf("%d%s%f",e1[i].eno,e1[i].ename,e1[i].sal);
+     scanf("%d%s%f",&e1[i].eno,&e1[i].ename,&e1[i].sal);  
    }
    for(i=0;i<n;i++)
    {
@@ -25,5 +24,4 @@ int main()
       printf("\n emp sal=%f",e1[i].sal);
      }
    }
-
 }
